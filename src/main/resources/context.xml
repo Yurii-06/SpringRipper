@@ -12,6 +12,7 @@
     </bean>
 
     <bean class="ripper.quotes.PostProxyInvokerContextListener" />
+    <bean class="ripper.quotes.bfpp.DeprecationHandlerBeanFactoryPostProcessor" />
     <bean class="ripper.quotes.bpp.ProfilingHadnlerBeanPostProcessor" />
     <bean class="ripper.quotes.bpp.InjectRandomIntAnnotationBeanPostProcessor" />
     <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />

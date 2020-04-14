@@ -15,7 +15,6 @@ public class PostProxyInvokerContextListener implements ApplicationListener<Cont
     @Autowired
     private ConfigurableListableBeanFactory factory;
 
-    @Override
     public void onApplicationEvent(ContextRefreshedEvent event) {
         final ApplicationContext context = event.getApplicationContext();
         final String[] beanDefinitionNames = context.getBeanDefinitionNames();

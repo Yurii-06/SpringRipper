@@ -1,11 +1,13 @@
 package ripper.quotes;
 
+import ripper.quotes.annotations.DeprecatedClass;
 import ripper.quotes.annotations.InjectRandomInt;
 import ripper.quotes.annotations.PostProxy;
 import ripper.quotes.annotations.Profiling;
 
 import javax.annotation.PostConstruct;
 
+@DeprecatedClass(newImpl = T1000.class)
 @Profiling
 public class TerminatorQuoter implements Quoter {
     private String message;
@@ -33,5 +35,9 @@ public class TerminatorQuoter implements Quoter {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public void setRepeat(int repeat) {
+        this.repeat = repeat;
     }
 }
